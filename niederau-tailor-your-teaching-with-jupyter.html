@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailor your teaching with Jupyter Notebooks &#8212; 52 Things You Should Know About Geocomputing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The obsolete geoscientist" href="pethick-the-obsolete-geoscientist.html" />
+    <link rel="prev" title="Some advice on reproducing figures" href="niccoli-advice-on-reproducing-figures.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">52 Things You Should Know About Geocomputing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="indices.html">
+   Indices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alphabetical.html">
+     Alphabetical
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-author.html">
+     By Author
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-topic.html">
+     By Topic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapters.html">
+   Chapters
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-in-praise-of-small-tools.html">
+     In Praise of Small Tools, or a short Ode to the CommandLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-best-practices-not-always-best-approach.html">
+     Best Practices are not (always) the best approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingham-domain-driven-design.html">
+     Domain-Driven Design in Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-minute-intro-to-hpc.html">
+     5 Minute Intro to HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caumon-levy-is-geology-cartesian.html">
+     Is Geology Cartesian?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cawood-bond-why-use-virtual-outcrops.html">
+     Why use virtual outcrops?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cockett-building-technical-comunication-tools.html">
+     Building Technical Communication Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ooi-simple-machine-learning-tutorial.html">
+     Simple Machine Learning: A Mini Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dinneen-segy.html">
+     SEG-Y: Judging books by their covers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dramsch-general-purpose-gpu-programming.html">
+     General purpose GPU programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-r-rstudio-tidyverse-for-geocomputing.html">
+     R, RStudio, and the tidyverse for Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-grammar-of-graphics.html">
+     The grammar of graphics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bril-turn-data-into-colors.html">
+     Turn data into colours
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ennen-software-everywhere.html">
+     Software, software, everywhere, but which ones should I choose?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fomel-reproducable-research.html">
+     Reproducible Research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gram-seismic-data-encryption.html">
+     Seismic Data Encryption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gosses-standing-on-shoulders.html">
+     Standing on the Shoulders of the Guy in the UK Office
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hale-my-favorite-10-line-program.html">
+     My favourite 10-line program
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-whats-so-special-about-geoscience.html">
+     What’s so special about geoscience?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-what-is-scientific-computing.html">
+     What is scientific computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-1.html">
+     The Virtual Geoscience Revolution: From William Smith to Lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-2.html">
+     The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kondrat-getting-started-in-geocomputing.html">
+     Getting started in Geocomputing can seem daunting but it doesn’t need to be!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="larsen-crossplots-boardroom-table.html">
+     Crossplots on the boardroom table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leckenby-my-name-is-bot-geobot.html">
+     My name is bot, geobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leeman-hardware-is-hard-teach-geotech.html">
+     Hardware is hard: teaching geotech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcnaughton-digitalization.html">
+     ‘Digitalization,’ from Harry Nyquist to the ‘edge’ of the internet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-steady-advance-of-linux.html">
+     The Steady Advance of Linux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-software-challenges-in-oil-and-gas.html">
+     Software Challenges in Oil and Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newton-human-neural-networks-in-geocomputing.html">
+     Human neural networks in geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-prototype-colormaps-for-faults.html">
+     Prototype colourmaps for fault interpretation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-keep-on-improving-geocomputing-projects.html">
+     Keep on improving your geocomputing projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-advice-on-reproducing-figures.html">
+     Some advice on reproducing figures
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tailor your teaching with Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pethick-the-obsolete-geoscientist.html">
+     The obsolete geoscientist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pisel-arm-wavers-anonymous.html">
+     Arm-wavers Anonymous
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="purves-learn-javascript.html">
+     Learn Javascript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-open-source-geostatistical-modelling.html">
+     Open source geostatistical geomodelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-machine-learning-for-geological-modelling.html">
+     Machine Learning for Geological Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="richardson-use-standard-not-specialized-formats.html">
+     Use standard, not specialized, file and problem formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rogers-advice-fracture-modelling-to-younger-self.html">
+     Some advice from a fractured reservoir modeler to his younger self
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers.html">
+     I hate computers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers-2.html">
+     I hate computers II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="saltman-speeding-things-up.html">
+     Speeding things up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selvage-serverless-computing.html">
+     Serverless computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steen-how-to-teach-geoscience-students-to-code.html">
+     How to teach geoscience students to code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thurmond-overcome-the-tyranny-of-formats.html">
+     Overcoming the tyranny of formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wellmann-a-geological-model-is-one-of-many.html">
+     A Geological Model is a Single Hypothesis - of Many Possible Ones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="delavarga-gempy-3d-structural-geomodelling.html">
+     GemPy: 3D Structural Geomodeling in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sabirin-quality-checking-spatial-data.html">
+     Quality Checking your Spatial Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sasvari-the-pheonix.html">
+     The Pheonix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storey-de-profundis-of-well-depth.html">
+     De profundis: of well depth
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bios.html">
+   Author Bios
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-status.html">
+     Review Status
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="submitting-an-article.html">
+     Submitting an article
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="headshots-needed.html">
+     Headshots &amp; Bios needed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-reviewers.html">
+     For Reviewers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="not-ready-for-review.html">
+   Not Ready For Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bougher-a-linear-algebra-approach-seismic-model.html">
+     Am=d: A linear algebra approach to seismic modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/niederau-tailor-your-teaching-with-jupyter.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Tailor your teaching with Jupyter Notebooks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tailor-your-teaching-with-jupyter-notebooks">
+<h1>Tailor your teaching with Jupyter Notebooks<a class="headerlink" href="#tailor-your-teaching-with-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>I’m a self-taught coder, but a geologist by education. So there were people who taught me how to analyse rocks, how to use GIS, how to interpret seismics (or a thin section, or an XRD difractogram). But during my studies, everything with programming, all <em>quantitative</em> lectures were done in Excel. It wasn’t until I studied abroad in France, that I learned about <a class="reference external" href="http://www.scilab.org/">Scilab</a>(<a class="reference external" href="https://www.scilab.org/">https://www.scilab.org/</a>) and programming. And that really got me into coding. Since then, I moved from Scilab to Matlab (as my university had free licenses for students), to Python.</p>
+<p>I started teaching courses in geothermics, and realized that most of the students in my exercise courses had little to no experience with programming, even though they had mandatory introduction courses about programming, now taught in Matlab instead of Excel. Still, that course was given in a frontal lecture style, where students are passive consumers, and follow the lecturer’s code displayed on the projector, often step-by-step. So similar to a math lecture, where students try to not fall behind copying the professor’s hand-written lemmas and derivations.</p>
+<p>That’s the traditional way, the way they’re used to. But it has been shown, that it is also one of the least efficient ways of teaching students to code <span id="id1">[<a class="reference internal" href="#id21">JGRC16</a>]</span>. So for improving a student’s skills in programming efficiently, they have to actively solve problems in a self-determined way.</p>
+<p>Achieving this in my courses turned out to be way more difficult than previously thought. When confronted with a problem and the IDE’s <em>white wall editor</em>, many students were lost. One key conclusion for me is, that the initial obstacle for students to start coding and learn programming is really high. Then I got the chance to work together with <a class="reference external" href="https://www.stifterverband.org/digital-lehrfellows/2017/wellmann">Professor Wellmann</a>(<a class="reference external" href="https://www.stifterverband.org/digital-lehrfellows/2017/wellmann">https://www.stifterverband.org/digital-lehrfellows/2017/wellmann</a>, retrieved: 2020-03-23) from RWTH-Aachen University on projects supported by the <a class="reference external" href="https://goo.gl/C5yry9">Exploratory Teaching Space Program</a> and the <a class="reference external" href="https://www.stifterverband.org/digital-lehrfellows/2017/wellmann">Stifterverband</a> (in German). In these projects, we created concepts of teaching code interactively using Jupyter Notebooks, and to generally lower <em>teething troubles</em> when it comes to coding.</p>
+<p>Jupyter notebooks combine code, formatable text, and images/plots in one single document format, making them the ideal tool for teaching. However, they work smoother with Python than with Matlab. But considering Python’s ever growing popularity, teaching students to code in Python instead in Matlab, might even be better. Especially, because basic coding skills become more and more prerequisite, Python is becoming more and more popular in the geosciences <span id="id2">[<a class="reference internal" href="#id23">Lin12</a>]</span>, and finally, because it is - in contrast to Matlab - free.</p>
+<p>In our projects, we tested combining task-definition together with predefined solution cells in a Jupyter Notebook instead handing out a single PDF file with the task-definition. The passively spent presence time during the exercise evolved to active working sessions. By using some of the many great notebook-extensions, such as <a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/exercise/readme.html">exercise, and exercise2</a>, solutions to exercises could be shipped with the notebook.<br />
+This is particularly useful for creating a notebook with increasing level of difficulty. Imagine the concept/topic/process to be taught is broken down in three stages. First, it is presented in a simple working example, where students can follow <strong>at their own speed</strong>. Based on this, they’re presented with a further example, where they have to code the answer, but a solution is provided, yet hidden until shown. The third stage, would then be a bit more complex example building on the previous learned content. Due to the linear structure of notebooks, such a concept can easily be implemented.</p>
+<p>The feedback by the students to using notebooks was great, so we increased their use, also for graded assignments. Due to the flourishing community of Jupyter-developers, there exists a tool called <a class="reference external" href="https://github.com/jupyter/nbgrader">nbgrader</a>(<a class="reference external" href="https://github.com/jupyter/nbgrader/">https://github.com/jupyter/nbgrader/</a>, retrieved: 2020-03-23.) which perfectly fitted our needs. Notebooks could now be autograded (with the occasional manual grading step)! To ensure that students are working under the same conditions for these graded assignments, we set up a server with <a class="reference external" href="https://jupyter.org/hub">jupyterhub</a>. Students then just had to log in and could start their assignments, which could be distributed and collected remotely by the advisor.</p>
+<p>Next to assignment notebooks equiped with autograding, we created a number of notebooks accompanying the content of the lecture as a opportunity of self-assessment for the students. In my opinion, a lot of geoscience students are <em>haptic</em> people (just think of rock-identification courses) appreciating visual input. Geological processes are often taught using analogue models, e.g. folding with modeling clay. Crystal systems are taught by using geometrical bodies made out of wood.</p>
+<p>Jupyter Notebooks enable haptic ways of teaching programming by using widgets. For example, we created <a class="reference external" href="https://github.com/Japhiolite/stress-and-strain">notebooks in structural geology</a>(<a class="reference external" href="https://github.com/Japhiolite/stress-and-strain">https://github.com/Japhiolite/stress-and-strain</a>, retrieved: 2020-03-23.) with sliders and boxes, so students can e.g. directly experience the response of a strain ellipse, when they changed the deformation tensor. Since this all started, I transferred some exercises from my <a class="reference external" href="https://github.com/Japhiolite/geothermics">geothermics course to notebooks</a>(<a class="reference external" href="https://github.com/Japhiolite/geothermics">https://github.com/Japhiolite/geothermics</a>, retrieved: 2020-03-23.). And I am quite late with this move. There is a constantly growing amount of teaching resources, such as <a class="reference external" href="https://github.com/koldunovn/python_for_geosciences">python for geosciences</a>(Koldunov, N. Python for geosciences, <a class="reference external" href="https://github.com/koldunovn/python_for_geosciences">https://github.com/koldunovn/python_for_geosciences</a>, retrieved: 2020-03-23.), <a class="reference external" href="https://geo-python.github.io/site/">Geo Python</a>(Department of Geosciences and Geography, University of Helsinki: Geo Pyhon, <a class="reference external" href="https://geo-python.github.io/site/">https://geo-python.github.io/site/</a>, retrieved: 2020-03-23.), and above all the great course <a class="reference external" href="https://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/">12 steps to Navier-Stokes by Lorena Barba</a> <span id="id3">[<a class="reference internal" href="#id22">BF18</a>]</span>. Lorena Barba and some co-authors even wrote a book about <a class="reference external" href="https://jupyter4edu.github.io/jupyter-edu-book/">Teaching and Learning with Jupyter</a>(Barba, Lorena A., Barker, Lecia J., Blank, Douglas S., Downey, Allen B., George, Timothy, Heagy, Lindsey J., Mandli, Kyle T., Moore, Jason K., Lippert, David, Niemeyer, Kyle E., Watkins, Ryan R., West, Richard H., Wickes, Elizabeth, Willing, Carol, and Zingale, Michael, 2019. Teaching and Learning with Jupyter, <a class="reference external" href="https://jupyter4edu.github.io/jupyter-edu-book/">https://jupyter4edu.github.io/jupyter-edu-book/</a>, retrieved: 2020-03-23.), which is an excellent read and resource, if you want to <em>jupyter-up your teaching</em>.</p>
+<p>One key take-away message for me was: Students had fun experimenting with these notebooks, from altering functions to trying to break them. And connecting the lecture content with a (strong) emotion, increases the learning effect demonstrably <span id="id4">[<a class="reference internal" href="#id20">Chr92</a>]</span>.</p>
+<p>During the last couple of years, we’ve come a long way in terms of teaching geoscience-students to code. Programming tools changed from Excel, over a Matlab IDE to Notebooks. Notebooks are used for different purposes, from lecture-accompanying notebooks, to (auto-)graded assignment notebooks. The influx of Python in our faculty is remarkable. Oh, and the programming and statistics course is now taught in Python, using Jupyter Notebooks.</p>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id3">BF18</a></span></dt>
+<dd><p>Lorena Barba and Gilbert Forsyth. Cfd Python: the 12 steps to Navier-Stokes equations. <em>Journal of Open Source Education</em>, 1(9):21, 11 2018. [Online; accessed 2022-01-20]. URL: <a class="reference external" href="https://jose.theoj.org/papers/10.21105/jose.00021">https://jose.theoj.org/papers/10.21105/jose.00021</a>, <a class="reference external" href="https://doi.org/10.21105/jose.00021">doi:10.21105/jose.00021</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id4">Chr92</a></span></dt>
+<dd><p>Sven-Åke Christianson. <em>The handbook of emotion and memory</em>. L. Erlbaum Associates, Hillsdale, N.J, 1992.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id1">JGRC16</a></span></dt>
+<dd><p>Christian T. Jacobs, Gerard J. Gorman, Huw E. Rees, and Lorraine E. Craig. Experiences With Efficient Methodologies for Teaching Computer Programming to Geoscientists. <em>Journal of Geoscience Education</em>, 64(3):183–198, 8 2016. [Online; accessed 2022-01-20]. URL: <a class="reference external" href="https://www.tandfonline.com/doi/full/10.5408/15-101.1">https://www.tandfonline.com/doi/full/10.5408/15-101.1</a>, <a class="reference external" href="https://doi.org/10.5408/15-101.1">doi:10.5408/15-101.1</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id2">Lin12</a></span></dt>
+<dd><p>Johnny Wei-Bing Lin. Why Python Is the Next Wave in Earth Sciences Computing. <em>Bulletin of the American Meteorological Society</em>, 93(12):1823–1824, 12 2012. [Online; accessed 2022-01-20]. URL: <a class="reference external" href="https://journals.ametsoc.org/doi/10.1175/BAMS-D-12-00148.1">https://journals.ametsoc.org/doi/10.1175/BAMS-D-12-00148.1</a>, <a class="reference external" href="https://doi.org/10.1175/BAMS-D-12-00148.1">doi:10.1175/BAMS-D-12-00148.1</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="niccoli-advice-on-reproducing-figures.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Some advice on reproducing figures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pethick-the-obsolete-geoscientist.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The obsolete geoscientist</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Software Underground<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

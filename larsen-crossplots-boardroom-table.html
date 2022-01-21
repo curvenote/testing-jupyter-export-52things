@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossplots on the boardroom table &#8212; 52 Things You Should Know About Geocomputing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="My name is bot, geobot" href="leckenby-my-name-is-bot-geobot.html" />
+    <link rel="prev" title="Getting started in Geocomputing can seem daunting but it doesn’t need to be!" href="kondrat-getting-started-in-geocomputing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">52 Things You Should Know About Geocomputing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="indices.html">
+   Indices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alphabetical.html">
+     Alphabetical
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-author.html">
+     By Author
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-topic.html">
+     By Topic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapters.html">
+   Chapters
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-in-praise-of-small-tools.html">
+     In Praise of Small Tools, or a short Ode to the CommandLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-best-practices-not-always-best-approach.html">
+     Best Practices are not (always) the best approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingham-domain-driven-design.html">
+     Domain-Driven Design in Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-minute-intro-to-hpc.html">
+     5 Minute Intro to HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caumon-levy-is-geology-cartesian.html">
+     Is Geology Cartesian?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cawood-bond-why-use-virtual-outcrops.html">
+     Why use virtual outcrops?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cockett-building-technical-comunication-tools.html">
+     Building Technical Communication Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ooi-simple-machine-learning-tutorial.html">
+     Simple Machine Learning: A Mini Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dinneen-segy.html">
+     SEG-Y: Judging books by their covers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dramsch-general-purpose-gpu-programming.html">
+     General purpose GPU programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-r-rstudio-tidyverse-for-geocomputing.html">
+     R, RStudio, and the tidyverse for Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-grammar-of-graphics.html">
+     The grammar of graphics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bril-turn-data-into-colors.html">
+     Turn data into colours
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ennen-software-everywhere.html">
+     Software, software, everywhere, but which ones should I choose?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fomel-reproducable-research.html">
+     Reproducible Research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gram-seismic-data-encryption.html">
+     Seismic Data Encryption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gosses-standing-on-shoulders.html">
+     Standing on the Shoulders of the Guy in the UK Office
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hale-my-favorite-10-line-program.html">
+     My favourite 10-line program
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-whats-so-special-about-geoscience.html">
+     What’s so special about geoscience?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-what-is-scientific-computing.html">
+     What is scientific computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-1.html">
+     The Virtual Geoscience Revolution: From William Smith to Lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-2.html">
+     The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kondrat-getting-started-in-geocomputing.html">
+     Getting started in Geocomputing can seem daunting but it doesn’t need to be!
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Crossplots on the boardroom table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leckenby-my-name-is-bot-geobot.html">
+     My name is bot, geobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leeman-hardware-is-hard-teach-geotech.html">
+     Hardware is hard: teaching geotech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcnaughton-digitalization.html">
+     ‘Digitalization,’ from Harry Nyquist to the ‘edge’ of the internet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-steady-advance-of-linux.html">
+     The Steady Advance of Linux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-software-challenges-in-oil-and-gas.html">
+     Software Challenges in Oil and Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newton-human-neural-networks-in-geocomputing.html">
+     Human neural networks in geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-prototype-colormaps-for-faults.html">
+     Prototype colourmaps for fault interpretation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-keep-on-improving-geocomputing-projects.html">
+     Keep on improving your geocomputing projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-advice-on-reproducing-figures.html">
+     Some advice on reproducing figures
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="niederau-tailor-your-teaching-with-jupyter.html">
+     Tailor your teaching with Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pethick-the-obsolete-geoscientist.html">
+     The obsolete geoscientist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pisel-arm-wavers-anonymous.html">
+     Arm-wavers Anonymous
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="purves-learn-javascript.html">
+     Learn Javascript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-open-source-geostatistical-modelling.html">
+     Open source geostatistical geomodelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-machine-learning-for-geological-modelling.html">
+     Machine Learning for Geological Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="richardson-use-standard-not-specialized-formats.html">
+     Use standard, not specialized, file and problem formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rogers-advice-fracture-modelling-to-younger-self.html">
+     Some advice from a fractured reservoir modeler to his younger self
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers.html">
+     I hate computers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers-2.html">
+     I hate computers II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="saltman-speeding-things-up.html">
+     Speeding things up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selvage-serverless-computing.html">
+     Serverless computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steen-how-to-teach-geoscience-students-to-code.html">
+     How to teach geoscience students to code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thurmond-overcome-the-tyranny-of-formats.html">
+     Overcoming the tyranny of formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wellmann-a-geological-model-is-one-of-many.html">
+     A Geological Model is a Single Hypothesis - of Many Possible Ones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="delavarga-gempy-3d-structural-geomodelling.html">
+     GemPy: 3D Structural Geomodeling in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sabirin-quality-checking-spatial-data.html">
+     Quality Checking your Spatial Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sasvari-the-pheonix.html">
+     The Pheonix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storey-de-profundis-of-well-depth.html">
+     De profundis: of well depth
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bios.html">
+   Author Bios
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-status.html">
+     Review Status
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="submitting-an-article.html">
+     Submitting an article
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="headshots-needed.html">
+     Headshots &amp; Bios needed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-reviewers.html">
+     For Reviewers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="not-ready-for-review.html">
+   Not Ready For Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bougher-a-linear-algebra-approach-seismic-model.html">
+     Am=d: A linear algebra approach to seismic modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/larsen-crossplots-boardroom-table.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Crossplots on the boardroom table</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="crossplots-on-the-boardroom-table">
+<h1>Crossplots on the boardroom table<a class="headerlink" href="#crossplots-on-the-boardroom-table" title="Permalink to this headline">¶</a></h1>
+<p>Hi, I am Eirik, 44 years old, 183 cm tall, Norwegian, a sedimentologist, and an explorationist. There are plenty of labels and metrics to describe you, me, and the rocks we all love to explore. Geology as a science has a rich vocabulary, and abundant measurement and classification schemes for describing rocks, and all sorts of features of the planet Earth. When it comes to predicting properties of the Earth where we do not have measurements, it’s a whole different game, and we often fall short.</p>
+<p>As an explorationist I have contributed to some discoveries, but also to lots of dry and disappointing wells. Exploration for oil and gas is hard. Fancy academic degrees and years of studying, which mainly involves describing rocks, is not necessarily enough to satisfy the expectations of those who pay for our advice and use it as the basis for their enormous investments in exploration wells and campaigns. As explorationists, we are basically investment advisors, albeit highly educated ones, and we are expected to provide profitable advice to our employers or clients. Often, we are under pressure to deliver quick analysis in time for various deadlines, but on rare occasions we get the opportunity to give it all we’ve got.</p>
+<p>A few years back I was given such an opportunity. A manager asked me to estimate the reservoir quality of a handful of neighboring prospects. Not an uncommon request from an exploration manager. However, this project was special. There was no rush. The schedule allowed for a whole year of data analysis. Plenty of data and resources were available: a dedicated petrophysicist, petrographers, rock physics experts, you name it. I figured, this time I’d better deliver some truly awesome analysis.</p>
+<p>So, how should I attack the problem? How should I give the client value for money? Investors in exploration drilling need to know what to expect in return from their investment, and what the chances are that they’ll see any return at all. Reservoir quality prediction is obviously just one piece of the “equation”, but an important piece though that will impact estimates of in place and recoverable volumes.</p>
+<p>Armed with plenty of resources, I decided - let’s use all the data. Let’s make a truly data-driven analysis out of this reservoir-quality prediction problem. Months were spent in the core store, loads of samples were analyzed in the lab, and CPI’s were generated. It was looking promising. A problem though, is that we can only apply our skills at describing rocks where they are sampled, or at least measured with some reliable tools. Unfortunately, that data is not available in locations where we’re expected to provide answers - the prospects. Our rich vocabulary and classification schemes don’t suffice. We need to predict! Although we do have seismic, rock physics, and seismic QI, sometimes prospects are deep, with low seismic resolution and low signal to noise ratio, thus limiting the reliability of quantitative predictions. Fortunately, there are geological trends between reservoir quality and: burial depth, depositional environments, diagenesis, burial history, temperature, pressure, and numerous other features. So let’s get to work and quantify these.</p>
+<p>Armed with some basic math skills and the omnipresent Excel, I got to work on the problem hoping to deliver the most awesome reservoir quality study ever. Cross plots were produced; porosity vs. depth, porosity vs. temperature, porosity vs. sedimentary facies and so on. All data available was cross-plotted against each “reservoir quality” property. There were so many cross plots, I printed them all and spread them across the boardroom table attempting to glean some insight from it all. Information overload! There was simply too much for them to absorb. I attempted to visualize the multidimensional nature of the problem by colour and symbol-coding the data points in the otherwise two-dimensional plots. Still too much information to make sense of, and surely too much to represent by some mathematical function. Or perhaps not? What would I know. Mathematicians and statisticians must have dealt with similar problems before? Reservoir quality is a function of lots of other properties. Reservoir quality prediction, like so many other tasks in predictive geology, is a multidimensional problem and a non-linear one too. I needed some new tools to tackle the problem.</p>
+<p>And so, my journey began in the exploration of techniques for multidimensional and non-linear regression and classification. As is commonly the case when you dig deep into a subject, you discover interesting things such as Machine Learning and Artificial Intelligence. Tech I thought were way beyond what a humble geologist might ever learn to exploit. It is not! Thanks to a vast community of coders and developers there is a rich ecosystem of tools available to tackle problems like this. Even better, programming languages and code libraries are accessible free of charge. In fact, some of the best coders in the top tech companies on the planet are offering their AI tools as open source. Although one of the main use cases of this technology is to collect data on you, me, and anyone else on the internet, with the goal of inferring what we might click on, buy or watch, this tech can be transferred to our own domain - geoscience. This is a fantastic opportunity for those of us who make geological predictions for a living.</p>
+<p>As I experienced, covering the boardroom table with cross plots will probably not bring you to subsurface-insight Nirvana. Instead, learn to exploit the tools that are now available. Explore them, be creative, and try out AI-assisted methods for your complex prediction problems. Be aware, there are snakes down there, Pythons, Anacondas, and Spyders to. They may bite unsuspecting geologists venturing into their domain. Go for it anyway! Get involved with the growing community of geoscientists that are exploring and exploiting AI technology. If you can take the pain it WILL make you stronger. In fact, it might give you predictive superpowers beyond what you could imagine.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="kondrat-getting-started-in-geocomputing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Getting started in Geocomputing can seem daunting but it doesn’t need to be!</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="leckenby-my-name-is-bot-geobot.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">My name is bot, geobot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Software Underground<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

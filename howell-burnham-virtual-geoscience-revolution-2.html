@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops &#8212; 52 Things You Should Know About Geocomputing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started in Geocomputing can seem daunting but it doesn’t need to be!" href="kondrat-getting-started-in-geocomputing.html" />
+    <link rel="prev" title="The Virtual Geoscience Revolution: From William Smith to Lidar" href="howell-burnham-virtual-geoscience-revolution-1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">52 Things You Should Know About Geocomputing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="indices.html">
+   Indices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alphabetical.html">
+     Alphabetical
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-author.html">
+     By Author
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-topic.html">
+     By Topic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapters.html">
+   Chapters
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-in-praise-of-small-tools.html">
+     In Praise of Small Tools, or a short Ode to the CommandLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-best-practices-not-always-best-approach.html">
+     Best Practices are not (always) the best approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingham-domain-driven-design.html">
+     Domain-Driven Design in Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-minute-intro-to-hpc.html">
+     5 Minute Intro to HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caumon-levy-is-geology-cartesian.html">
+     Is Geology Cartesian?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cawood-bond-why-use-virtual-outcrops.html">
+     Why use virtual outcrops?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cockett-building-technical-comunication-tools.html">
+     Building Technical Communication Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ooi-simple-machine-learning-tutorial.html">
+     Simple Machine Learning: A Mini Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dinneen-segy.html">
+     SEG-Y: Judging books by their covers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dramsch-general-purpose-gpu-programming.html">
+     General purpose GPU programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-r-rstudio-tidyverse-for-geocomputing.html">
+     R, RStudio, and the tidyverse for Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-grammar-of-graphics.html">
+     The grammar of graphics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bril-turn-data-into-colors.html">
+     Turn data into colours
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ennen-software-everywhere.html">
+     Software, software, everywhere, but which ones should I choose?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fomel-reproducable-research.html">
+     Reproducible Research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gram-seismic-data-encryption.html">
+     Seismic Data Encryption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gosses-standing-on-shoulders.html">
+     Standing on the Shoulders of the Guy in the UK Office
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hale-my-favorite-10-line-program.html">
+     My favourite 10-line program
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-whats-so-special-about-geoscience.html">
+     What’s so special about geoscience?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-what-is-scientific-computing.html">
+     What is scientific computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-1.html">
+     The Virtual Geoscience Revolution: From William Smith to Lidar
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kondrat-getting-started-in-geocomputing.html">
+     Getting started in Geocomputing can seem daunting but it doesn’t need to be!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="larsen-crossplots-boardroom-table.html">
+     Crossplots on the boardroom table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leckenby-my-name-is-bot-geobot.html">
+     My name is bot, geobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leeman-hardware-is-hard-teach-geotech.html">
+     Hardware is hard: teaching geotech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcnaughton-digitalization.html">
+     ‘Digitalization,’ from Harry Nyquist to the ‘edge’ of the internet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-steady-advance-of-linux.html">
+     The Steady Advance of Linux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-software-challenges-in-oil-and-gas.html">
+     Software Challenges in Oil and Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newton-human-neural-networks-in-geocomputing.html">
+     Human neural networks in geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-prototype-colormaps-for-faults.html">
+     Prototype colourmaps for fault interpretation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-keep-on-improving-geocomputing-projects.html">
+     Keep on improving your geocomputing projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-advice-on-reproducing-figures.html">
+     Some advice on reproducing figures
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="niederau-tailor-your-teaching-with-jupyter.html">
+     Tailor your teaching with Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pethick-the-obsolete-geoscientist.html">
+     The obsolete geoscientist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pisel-arm-wavers-anonymous.html">
+     Arm-wavers Anonymous
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="purves-learn-javascript.html">
+     Learn Javascript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-open-source-geostatistical-modelling.html">
+     Open source geostatistical geomodelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-machine-learning-for-geological-modelling.html">
+     Machine Learning for Geological Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="richardson-use-standard-not-specialized-formats.html">
+     Use standard, not specialized, file and problem formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rogers-advice-fracture-modelling-to-younger-self.html">
+     Some advice from a fractured reservoir modeler to his younger self
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers.html">
+     I hate computers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers-2.html">
+     I hate computers II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="saltman-speeding-things-up.html">
+     Speeding things up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selvage-serverless-computing.html">
+     Serverless computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steen-how-to-teach-geoscience-students-to-code.html">
+     How to teach geoscience students to code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thurmond-overcome-the-tyranny-of-formats.html">
+     Overcoming the tyranny of formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wellmann-a-geological-model-is-one-of-many.html">
+     A Geological Model is a Single Hypothesis - of Many Possible Ones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="delavarga-gempy-3d-structural-geomodelling.html">
+     GemPy: 3D Structural Geomodeling in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sabirin-quality-checking-spatial-data.html">
+     Quality Checking your Spatial Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sasvari-the-pheonix.html">
+     The Pheonix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storey-de-profundis-of-well-depth.html">
+     De profundis: of well depth
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bios.html">
+   Author Bios
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-status.html">
+     Review Status
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="submitting-an-article.html">
+     Submitting an article
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="headshots-needed.html">
+     Headshots &amp; Bios needed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-reviewers.html">
+     For Reviewers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="not-ready-for-review.html">
+   Not Ready For Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bougher-a-linear-algebra-approach-seismic-model.html">
+     Am=d: A linear algebra approach to seismic modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/howell-burnham-virtual-geoscience-revolution-2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stage-4-beyond-basic-lidar">
+   Stage 4 - Beyond basic LIDAR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stage-5-drones-and-photogrammetry-the-democratisation-of-virtual-outcrops">
+   Stage 5 – Drones and Photogrammetry: The democratisation of virtual outcrops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-future">
+   The Future
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stage-4-beyond-basic-lidar">
+   Stage 4 - Beyond basic LIDAR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stage-5-drones-and-photogrammetry-the-democratisation-of-virtual-outcrops">
+   Stage 5 – Drones and Photogrammetry: The democratisation of virtual outcrops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-future">
+   The Future
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-virtual-geoscience-revolution-beyond-lidar-the-democratization-of-virtual-outcrops">
+<h1>The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops<a class="headerlink" href="#the-virtual-geoscience-revolution-beyond-lidar-the-democratization-of-virtual-outcrops" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stage-4-beyond-basic-lidar">
+<h2>Stage 4 - Beyond basic LIDAR<a class="headerlink" href="#stage-4-beyond-basic-lidar" title="Permalink to this headline">¶</a></h2>
+<p>Helimap, a Swiss company, borrowed an inertial navigation system from a Cruise Missile and developed a method of mounting the LIDAR scanner into a helicopter <span id="id1">[<a class="reference internal" href="#id17">VS04</a>]</span>. The creation of heli-lidar increased the practical size of virtual outcrops from less than 1km to 10’s of kms. Suddenly, huge datasets could be collected from seismic-scale outcrop sections such as the Book Cliffs in Utah, the Karoo in South Africa and large arctic outcrops in Greenland and Svalbard <span id="id2">[<a class="reference internal" href="#id20">BVBW08</a>]</span>. A second advance that occurred in 2006 was the co-registration of hyper-spectral imagery of the cliff sections. Using long range infrared sensors, similar to those used for satellite remote sensing (1100 – 2500 nm), it was possible to automatically map lithology and mineralogy from cliff sections and drape classified images directly onto the virtual outcrop <span id="id3">[<a class="reference internal" href="#id19">KBH12</a>]</span>. These advances, and the large datasets that were collected, required software to visualise and interpret the data. While some existing software was modified to handle the 3D data, the key step came when two software packages were developed in parallel, VRGS at the University of Manchester <span id="id4">[<a class="reference internal" href="#id16">HSHB15</a>]</span> and LIME at Uni Research in Bergen <span id="id5">[<a class="reference internal" href="#id18">BRN+19</a>]</span>. Both packages were specifically designed to deal with virtual outcrop data with a suite of interpretation tools, and they ran well on standard desktop PCs or even laptops. Virtual Outcrops had arrived!</p>
+</div>
+<div class="section" id="stage-5-drones-and-photogrammetry-the-democratisation-of-virtual-outcrops">
+<h2>Stage 5 – Drones and Photogrammetry: The democratisation of virtual outcrops<a class="headerlink" href="#stage-5-drones-and-photogrammetry-the-democratisation-of-virtual-outcrops" title="Permalink to this headline">¶</a></h2>
+<p>By 2010 a number of different groups were collecting, processing and using virtual outcrops. However due to the cost of the hardware (a typical LIDAR was in excess of £100,000) and the time-consuming nature of acquisition and processing, it remained a specialist tool. This changed with the advent of two parallel but unrelated advances. The first of these was the resurgence of photogrammetry and the release of a new set of algorithms called Structure from Motion (SfM). Photogrammetry is the concept of picking corresponding points on a series of pictures of an object, taken from different locations, and using this to reconstruct the scene in 3D. While the concept has been around for almost as long as photographs, it wasn’t until the advent of SfM in the mid 2000’s, coupled with advances in computer processing power, that it became a practical method for building large 3D models of outcrops.</p>
+<p>The advent of SfM also coincided with the emergence of cheap consumer UAVs (drones), with high quality cameras that could take hundreds of photos of outcrops from optimal angles. Drones, combined with SfM, meant that suddenly anyone could build 3D virtual outcrops – and they did. By 2018, virtual outcrops had become commonplace and almost anyone working on outcrop geology was collecting and utilising them. A drone has become a standard piece of field kit and data from a 20-minute flight are processed in a few hours to produce an accurate, 3D photorealistic model of a cliff section of interest, that can be interpreted on a laptop. For the first time in 200 years, we are no longer reliant on recording geological information on 2D maps using coloured pencils. The Virtual Geoscience Revolution has arrived.</p>
+</div>
+<div class="section" id="the-future">
+<h2>The Future<a class="headerlink" href="#the-future" title="Permalink to this headline">¶</a></h2>
+<p>Virtual Geoscience is in its early days; as more people adopt the technologies, significant advances will come. During the 2020/21 Covid-19 pandemic, Virtual Field Trips based upon virtual outcrops became a key part of geoscience teaching. Virtual Reality (VR) (<a class="reference internal" href="#be1542"><span class="std std-numref">Figure 4</span></a>A), Machine Learning and automated interpretation using Artificial Intelligent systems on vast datasets (Big Data) are coming. <a class="reference external" href="http://V3Geo.com">V3Geo.com</a>, the first public cloud-based repository specifically developed for virtual outcrops, was launched in 2020, and more are coming. Virtual outcrop technologies are fundamentally changing how we do field geology; the future (<a class="reference internal" href="#be1542"><span class="std std-numref">Figure 4</span></a>B) is once again very exciting!</p>
+<div class="figure align-default" id="be1542">
+<img alt="_images/5w7N97WoctdHdShYPn5p-n9XppgHxXhX7BuHynYmd-v1.png" src="_images/5w7N97WoctdHdShYPn5p-n9XppgHxXhX7BuHynYmd-v1.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Virtual Reality of outcrop models. A. Geologist using a VR headset to view a virtual outcrop in an immersive 3D environment. B. Approximate user’s view of a virtual outcrop in VR.</span><a class="headerlink" href="#be1542" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id6"><dl class="citation">
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">BVBW08</a></span></dt>
+<dd><p>Simon Buckley, Julien Vallet, Alvar Braathen, and Walter Wheeler. Oblique helicopter-based laser scanningfor digital terrain modelling and visualisation of geological outcrops. In <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, volume XXXVII of B4. 2008.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id5">BRN+19</a></span></dt>
+<dd><p>Simon J. Buckley, Kari Ringdal, Nicole Naumann, Benjamin Dolva, Tobias H. Kurz, John A. Howell, and Thomas J.B. Dewez. Lime: software for 3-D visualization, interpretation, and communication of virtual geoscience models. <em>Geosphere</em>, 15(1):222–235, jan 10 2019. URL: <a class="reference external" href="http://dx.doi.org/10.1130/GES02002.1">http://dx.doi.org/10.1130/GES02002.1</a>, <a class="reference external" href="https://doi.org/10.1130/ges02002.1">doi:10.1130/ges02002.1</a>.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id4">HSHB15</a></span></dt>
+<dd><p>D. Hodgetts, T. Seers, W. Head, and B.S. Burnham. High Performance Visualisation of Multiscale Geological Outcrop Data in Single Software Environment. In <em>77th EAGE Conference and Exhibition 2015</em>. EAGE Publications BV, jun 1 2015. URL: <a class="reference external" href="http://dx.doi.org/10.3997/2214-4609.201412862">http://dx.doi.org/10.3997/2214-4609.201412862</a>, <a class="reference external" href="https://doi.org/10.3997/2214-4609.201412862">doi:10.3997/2214-4609.201412862</a>.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id3">KBH12</a></span></dt>
+<dd><p>Tobias H. Kurz, Simon J. Buckley, and John A. Howell. Close-range hyperspectral imaging for geological field studies: workflow and methods. <em>International Journal of Remote Sensing</em>, 34(5):1798–1822, nov 2 2012. URL: <a class="reference external" href="http://dx.doi.org/10.1080/01431161.2012.727039">http://dx.doi.org/10.1080/01431161.2012.727039</a>, <a class="reference external" href="https://doi.org/10.1080/01431161.2012.727039">doi:10.1080/01431161.2012.727039</a>.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id1">VS04</a></span></dt>
+<dd><p>Julien Vallet and Jan Skaloud. Development and experiences with a fully-digital handheld mapping system operated from a helicopter. In <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, volume XX. 7 2004.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="howell-burnham-virtual-geoscience-revolution-1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Virtual Geoscience Revolution: From William Smith to Lidar</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="kondrat-getting-started-in-geocomputing.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting started in Geocomputing can seem daunting but it doesn’t need to be!</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Software Underground<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

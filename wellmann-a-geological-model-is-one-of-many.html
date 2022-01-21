@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Geological Model is a Single Hypothesis - of Many Possible Ones &#8212; 52 Things You Should Know About Geocomputing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GemPy: 3D Structural Geomodeling in Python" href="delavarga-gempy-3d-structural-geomodelling.html" />
+    <link rel="prev" title="Overcoming the tyranny of formats" href="thurmond-overcome-the-tyranny-of-formats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">52 Things You Should Know About Geocomputing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="indices.html">
+   Indices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alphabetical.html">
+     Alphabetical
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-author.html">
+     By Author
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-topic.html">
+     By Topic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapters.html">
+   Chapters
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-in-praise-of-small-tools.html">
+     In Praise of Small Tools, or a short Ode to the CommandLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-best-practices-not-always-best-approach.html">
+     Best Practices are not (always) the best approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingham-domain-driven-design.html">
+     Domain-Driven Design in Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-minute-intro-to-hpc.html">
+     5 Minute Intro to HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="caumon-levy-is-geology-cartesian.html">
+     Is Geology Cartesian?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cawood-bond-why-use-virtual-outcrops.html">
+     Why use virtual outcrops?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cockett-building-technical-comunication-tools.html">
+     Building Technical Communication Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ooi-simple-machine-learning-tutorial.html">
+     Simple Machine Learning: A Mini Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dinneen-segy.html">
+     SEG-Y: Judging books by their covers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dramsch-general-purpose-gpu-programming.html">
+     General purpose GPU programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-r-rstudio-tidyverse-for-geocomputing.html">
+     R, RStudio, and the tidyverse for Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-grammar-of-graphics.html">
+     The grammar of graphics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bril-turn-data-into-colors.html">
+     Turn data into colours
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ennen-software-everywhere.html">
+     Software, software, everywhere, but which ones should I choose?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fomel-reproducable-research.html">
+     Reproducible Research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gram-seismic-data-encryption.html">
+     Seismic Data Encryption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gosses-standing-on-shoulders.html">
+     Standing on the Shoulders of the Guy in the UK Office
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hale-my-favorite-10-line-program.html">
+     My favourite 10-line program
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-whats-so-special-about-geoscience.html">
+     What’s so special about geoscience?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-what-is-scientific-computing.html">
+     What is scientific computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-1.html">
+     The Virtual Geoscience Revolution: From William Smith to Lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-2.html">
+     The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kondrat-getting-started-in-geocomputing.html">
+     Getting started in Geocomputing can seem daunting but it doesn’t need to be!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="larsen-crossplots-boardroom-table.html">
+     Crossplots on the boardroom table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leckenby-my-name-is-bot-geobot.html">
+     My name is bot, geobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leeman-hardware-is-hard-teach-geotech.html">
+     Hardware is hard: teaching geotech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcnaughton-digitalization.html">
+     ‘Digitalization,’ from Harry Nyquist to the ‘edge’ of the internet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-steady-advance-of-linux.html">
+     The Steady Advance of Linux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-software-challenges-in-oil-and-gas.html">
+     Software Challenges in Oil and Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newton-human-neural-networks-in-geocomputing.html">
+     Human neural networks in geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-prototype-colormaps-for-faults.html">
+     Prototype colourmaps for fault interpretation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-keep-on-improving-geocomputing-projects.html">
+     Keep on improving your geocomputing projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-advice-on-reproducing-figures.html">
+     Some advice on reproducing figures
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="niederau-tailor-your-teaching-with-jupyter.html">
+     Tailor your teaching with Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pethick-the-obsolete-geoscientist.html">
+     The obsolete geoscientist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pisel-arm-wavers-anonymous.html">
+     Arm-wavers Anonymous
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="purves-learn-javascript.html">
+     Learn Javascript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-open-source-geostatistical-modelling.html">
+     Open source geostatistical geomodelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-machine-learning-for-geological-modelling.html">
+     Machine Learning for Geological Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="richardson-use-standard-not-specialized-formats.html">
+     Use standard, not specialized, file and problem formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rogers-advice-fracture-modelling-to-younger-self.html">
+     Some advice from a fractured reservoir modeler to his younger self
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers.html">
+     I hate computers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers-2.html">
+     I hate computers II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="saltman-speeding-things-up.html">
+     Speeding things up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selvage-serverless-computing.html">
+     Serverless computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steen-how-to-teach-geoscience-students-to-code.html">
+     How to teach geoscience students to code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thurmond-overcome-the-tyranny-of-formats.html">
+     Overcoming the tyranny of formats
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     A Geological Model is a Single Hypothesis - of Many Possible Ones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="delavarga-gempy-3d-structural-geomodelling.html">
+     GemPy: 3D Structural Geomodeling in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sabirin-quality-checking-spatial-data.html">
+     Quality Checking your Spatial Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sasvari-the-pheonix.html">
+     The Pheonix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storey-de-profundis-of-well-depth.html">
+     De profundis: of well depth
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bios.html">
+   Author Bios
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-status.html">
+     Review Status
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="submitting-an-article.html">
+     Submitting an article
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="headshots-needed.html">
+     Headshots &amp; Bios needed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-reviewers.html">
+     For Reviewers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="not-ready-for-review.html">
+   Not Ready For Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bougher-a-linear-algebra-approach-seismic-model.html">
+     Am=d: A linear algebra approach to seismic modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/wellmann-a-geological-model-is-one-of-many.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A Geological Model is a Single Hypothesis - of Many Possible Ones</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-geological-model-is-a-single-hypothesis-of-many-possible-ones">
+<h1>A Geological Model is a Single Hypothesis - of Many Possible Ones<a class="headerlink" href="#a-geological-model-is-a-single-hypothesis-of-many-possible-ones" title="Permalink to this headline">¶</a></h1>
+<p>Geological models are widely used in both science and industry to represent main structural features in the subsurface [see <span id="id1">[<a class="reference internal" href="#id9">WC18</a>]</span> for a recent overview] . And in a comforting way, they give us the idea that we know very accurately how the world below our feet looks like - a dangerously misleading conception. The perceived reality of geological models is intriguing, and this aspect is getting even more pronounced in times of better 3-D visualisation of models on the computer, and probably increasingly so when we will soon all have our VR glasses on our heads - and the models look ever more realistic: we can turn them around, inspect them from all sides - just like models of a car, a house - reality!</p>
+<p>Just with the important difference that these models are, in fact, often highly uncertain. They are based on limited information that is combined with pre-existing concepts and knowledge and implemented in a way that the respective geological modelling tool allows. Even though this aspect may be obvious to the person creating the model, it is difficult to understand for those who are not trained in a geoscientific subject and may not be aware of the underlying difficulties and uncertainties. And it gets even more intriguing for people who merely inspect the model, or use it to as a basis for potentially important economic decisions.</p>
+<p>For us as modellers, it is also often tempting to assign a high value of trust to our models. After all, we often spend many weeks and even months with a model, so how can it be wrong? So we defend it against all other perceptions or the idea that they somehow could be uncertain and brush criticism aside! Actually, this problem has been recognised more than 100 years ago and discussed in a paper describing the concept of multiple working hypotheses <span id="id2">[<a class="reference internal" href="#id28">Cha97</a>]</span> perpetuating the idea that we should never only propose one scientific hypothesis, but many different ones, so that we do not fall prey to the misconception that a single hypothesis is correct. And, here an interesting fact: the author of this article, T.C. Chamberlin, was actually a geologist!</p>
+<p>So, how does this insight transfer to our problem at hand, the modeling of geological structures? Most importantly, we can (and should) consider a geological model as what it is: a hypothesis about the geometric distribution of geological structures in the subsurface (or a sand/shale layering, facies distribution, etc. - whatever our specific objective is). If we take this step, then we can also clearly and openly communicate that this is merely one possible model of many - and by definition, it is wrong. But it does show, on the basis of all our information, data, knowledge, and technical possibilities, one interpretation about the subsurface that can well be illuminating and useful(At this point, the well-known aphorism attributed to George Box of course comes to mind that “All models are wrong, but some are useful”.) - but subject to uncertainties.</p>
+<p>Once we take this step, then several aspects suddenly become clear: (1) a model is never completely finished, it is always “work in progress” and (2) it should be possible to revise the model when more data becomes available; Furthermore, (3) if a model is only a hypothesis, then we should be able to test it against other information, to see if it supports our hypothesis or if our hypothesis has to be revised, and (4) in the ideal of multiple working hypotheses, we should actually be able to generate more than one hypothesis and consider multiple working hypotheses at the same time. So: how can all of these aspects be realised? And: where is the button for all of this in my geological modelling software?</p>
+<p>This is the stage where, at the moment, we are at a truly exciting time of development. There are now more and more geological modelling and simulation methods available in open-source projects [e.g. <span id="id3">[<a class="reference internal" href="#id30">VSW19</a>]</span>, <span id="id4">Ailleres <em>et al.</em> [<a class="reference internal" href="#id26">AJK+19</a>]</span>] - with a capability and complexity that will increasingly rival the methods that are now locked-away in commercial (and very expensive) software packages(This aspect should not be understood as “open-source methods replacing commercial packages” - as the latter ones contain so much more capabilities and well-established interfaces. Here, I only refer to the interpolation algorithms.). These open geocomputing tools give us the flexibility to express and test completely new approaches - as we can embed and combine them with all the other powerful open-source tools that are currently so actively developed. One example of our own work is the combination of a sophisticated geological interpolation algorithm with the probabilistic programming framework <code class="docutils literal notranslate"><span class="pre">pymc</span></code> <span id="id5">[<a class="reference internal" href="#id29">PHF10</a>]</span> to obtain a framework for geological inference <span id="id6">[<a class="reference internal" href="#id27">WVM+18</a>]</span> which allows us now to efficiently test multiple geological hypotheses against additional information - and if we can encode the hypotheses in the form of prior probabilities and the additional information in the form of likelihood functions, then this quickly leads to an interpretation of structural geological modelling as a Bayesian inference problem, with completely new possibilities to express our geological understanding and thoughts in computer code.</p>
+<p>With more and more powerful computational tools available, this way of thinking has the potential to completely change the way in which we work with geological models - and combined with the active developments in the field of geocomputing, it provides us with a new freedom to test novel ideas and to combine information in ways that far exceed what has been possible to date.</p>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id7"><dl class="citation">
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id4">AJK+19</a></span></dt>
+<dd><p>Laurent Ailleres, Mark Jessell, Eric Kemp, Guillaume Caumon, Florian Wellmann, Lachlan Grose, Robin Armit, Mark Lindsay, Jeremie Giraud, Boyan Brodaric, Matthew Harrison, and Gabriel Courrioux. Loop - Enabling 3d stochastic geological modelling. <em>ASEG Extended Abstracts</em>, 2019(1):1–3, 12 2019. [Online; accessed 2022-01-19]. URL: <a class="reference external" href="https://www.tandfonline.com/doi/full/10.1080/22020586.2019.12072955">https://www.tandfonline.com/doi/full/10.1080/22020586.2019.12072955</a>, <a class="reference external" href="https://doi.org/10.1080/22020586.2019.12072955">doi:10.1080/22020586.2019.12072955</a>.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id2">Cha97</a></span></dt>
+<dd><p>T. C. Chamberlin. Studies for Students: the Method of Multiple Working Hypotheses. <em>The Journal of Geology</em>, 5(8):837–848, 11 1897. [Online; accessed 2022-01-19]. URL: <a class="reference external" href="https://www.journals.uchicago.edu/doi/10.1086/607980">https://www.journals.uchicago.edu/doi/10.1086/607980</a>, <a class="reference external" href="https://doi.org/10.1086/607980">doi:10.1086/607980</a>.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id5">PHF10</a></span></dt>
+<dd><p>Anand Patil, David Huard, and Christopher Fonnesbeck. \textbf PyMC : bayesian Stochastic Modelling in \textit Python. <em>Journal of Statistical Software</em>, 2010. [Online; accessed 2022-01-19]. URL: <a class="reference external" href="http://www.jstatsoft.org/v35/i04/">http://www.jstatsoft.org/v35/i04/</a>, <a class="reference external" href="https://doi.org/10.18637/jss.v035.i04">doi:10.18637/jss.v035.i04</a>.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id3">VSW19</a></span></dt>
+<dd><p>Miguel Varga, Alexander Schaaf, and Florian Wellmann. Gempy 1.0: open-source stochastic geological modeling and inversion. <em>Geoscientific Model Development</em>, 12(1):1–32, 1 2019. [Online; accessed 2022-01-19]. URL: <a class="reference external" href="https://gmd.copernicus.org/articles/12/1/2019/">https://gmd.copernicus.org/articles/12/1/2019/</a>, <a class="reference external" href="https://doi.org/10.5194/gmd-12-1-2019">doi:10.5194/gmd-12-1-2019</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">WC18</a></span></dt>
+<dd><p>Florian Wellmann and Guillaume Caumon. <em>3-D Structural geological models: Concepts, methods, and uncertainties</em>, pages 1–121. Volume 59. Elsevier, 2018, [Online; accessed 2022-01-19]. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0065268718300013">https://linkinghub.elsevier.com/retrieve/pii/S0065268718300013</a>, <a class="reference external" href="https://doi.org/10.1016/bs.agph.2018.09.001">doi:10.1016/bs.agph.2018.09.001</a>.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id6">WVM+18</a></span></dt>
+<dd><p>J. Florian Wellmann, Miguel Varga, Ruth E. Murdie, Klaus Gessner, and Mark Jessell. Uncertainty estimation for a geological model of the Sandstone greenstone belt, Western Australia – insights from integrated geological and geophysical inversion in a Bayesian inference framework. <em>Geological Society, London, Special Publications</em>, 453(1):41–56, 2018. [Online; accessed 2022-01-19]. URL: <a class="reference external" href="http://sp.lyellcollection.org/lookup/doi/10.1144/SP453.12">http://sp.lyellcollection.org/lookup/doi/10.1144/SP453.12</a>, <a class="reference external" href="https://doi.org/10.1144/SP453.12">doi:10.1144/SP453.12</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="thurmond-overcome-the-tyranny-of-formats.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Overcoming the tyranny of formats</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="delavarga-gempy-3d-structural-geomodelling.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GemPy: 3D Structural Geomodeling in Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Software Underground<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

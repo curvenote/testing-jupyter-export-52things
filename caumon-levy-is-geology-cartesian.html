@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is Geology Cartesian? &#8212; 52 Things You Should Know About Geocomputing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Why use virtual outcrops?" href="cawood-bond-why-use-virtual-outcrops.html" />
+    <link rel="prev" title="5 Minute Intro to HPC" href="5-minute-intro-to-hpc.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">52 Things You Should Know About Geocomputing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="indices.html">
+   Indices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alphabetical.html">
+     Alphabetical
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-author.html">
+     By Author
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="by-topic.html">
+     By Topic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapters.html">
+   Chapters
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-in-praise-of-small-tools.html">
+     In Praise of Small Tools, or a short Ode to the CommandLine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bentley-best-practices-not-always-best-approach.html">
+     Best Practices are not (always) the best approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingham-domain-driven-design.html">
+     Domain-Driven Design in Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5-minute-intro-to-hpc.html">
+     5 Minute Intro to HPC
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Is Geology Cartesian?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cawood-bond-why-use-virtual-outcrops.html">
+     Why use virtual outcrops?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cockett-building-technical-comunication-tools.html">
+     Building Technical Communication Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ooi-simple-machine-learning-tutorial.html">
+     Simple Machine Learning: A Mini Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dinneen-segy.html">
+     SEG-Y: Judging books by their covers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dramsch-general-purpose-gpu-programming.html">
+     General purpose GPU programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-r-rstudio-tidyverse-for-geocomputing.html">
+     R, RStudio, and the tidyverse for Geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dunnington-grammar-of-graphics.html">
+     The grammar of graphics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bril-turn-data-into-colors.html">
+     Turn data into colours
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ennen-software-everywhere.html">
+     Software, software, everywhere, but which ones should I choose?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fomel-reproducable-research.html">
+     Reproducible Research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gram-seismic-data-encryption.html">
+     Seismic Data Encryption
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gosses-standing-on-shoulders.html">
+     Standing on the Shoulders of the Guy in the UK Office
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hale-my-favorite-10-line-program.html">
+     My favourite 10-line program
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-whats-so-special-about-geoscience.html">
+     What’s so special about geoscience?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hall-what-is-scientific-computing.html">
+     What is scientific computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-1.html">
+     The Virtual Geoscience Revolution: From William Smith to Lidar
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="howell-burnham-virtual-geoscience-revolution-2.html">
+     The Virtual Geoscience Revolution: Beyond Lidar – the democratization of Virtual Outcrops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kondrat-getting-started-in-geocomputing.html">
+     Getting started in Geocomputing can seem daunting but it doesn’t need to be!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="larsen-crossplots-boardroom-table.html">
+     Crossplots on the boardroom table
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leckenby-my-name-is-bot-geobot.html">
+     My name is bot, geobot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leeman-hardware-is-hard-teach-geotech.html">
+     Hardware is hard: teaching geotech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mcnaughton-digitalization.html">
+     ‘Digitalization,’ from Harry Nyquist to the ‘edge’ of the internet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-steady-advance-of-linux.html">
+     The Steady Advance of Linux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="menger-software-challenges-in-oil-and-gas.html">
+     Software Challenges in Oil and Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newton-human-neural-networks-in-geocomputing.html">
+     Human neural networks in geocomputing
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-prototype-colormaps-for-faults.html">
+     Prototype colourmaps for fault interpretation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-keep-on-improving-geocomputing-projects.html">
+     Keep on improving your geocomputing projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="niccoli-advice-on-reproducing-figures.html">
+     Some advice on reproducing figures
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="niederau-tailor-your-teaching-with-jupyter.html">
+     Tailor your teaching with Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pethick-the-obsolete-geoscientist.html">
+     The obsolete geoscientist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pisel-arm-wavers-anonymous.html">
+     Arm-wavers Anonymous
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="purves-learn-javascript.html">
+     Learn Javascript
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-open-source-geostatistical-modelling.html">
+     Open source geostatistical geomodelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyrcz-machine-learning-for-geological-modelling.html">
+     Machine Learning for Geological Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="richardson-use-standard-not-specialized-formats.html">
+     Use standard, not specialized, file and problem formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rogers-advice-fracture-modelling-to-younger-self.html">
+     Some advice from a fractured reservoir modeler to his younger self
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers.html">
+     I hate computers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rusic-i-hate-computers-2.html">
+     I hate computers II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="saltman-speeding-things-up.html">
+     Speeding things up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="selvage-serverless-computing.html">
+     Serverless computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steen-how-to-teach-geoscience-students-to-code.html">
+     How to teach geoscience students to code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thurmond-overcome-the-tyranny-of-formats.html">
+     Overcoming the tyranny of formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="wellmann-a-geological-model-is-one-of-many.html">
+     A Geological Model is a Single Hypothesis - of Many Possible Ones
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="delavarga-gempy-3d-structural-geomodelling.html">
+     GemPy: 3D Structural Geomodeling in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sabirin-quality-checking-spatial-data.html">
+     Quality Checking your Spatial Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sasvari-the-pheonix.html">
+     The Pheonix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storey-de-profundis-of-well-depth.html">
+     De profundis: of well depth
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bios.html">
+   Author Bios
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="review-status.html">
+     Review Status
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="submitting-an-article.html">
+     Submitting an article
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="headshots-needed.html">
+     Headshots &amp; Bios needed
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-reviewers.html">
+     For Reviewers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="not-ready-for-review.html">
+   Not Ready For Review
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bougher-a-linear-algebra-approach-seismic-model.html">
+     Am=d: A linear algebra approach to seismic modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/caumon-levy-is-geology-cartesian.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometry-discontinuities">
+   Geometry / discontinuities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adaptivity">
+   Adaptivity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Is Geology Cartesian?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometry-discontinuities">
+   Geometry / discontinuities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adaptivity">
+   Adaptivity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="is-geology-cartesian">
+<h1>Is Geology Cartesian?<a class="headerlink" href="#is-geology-cartesian" title="Permalink to this headline">¶</a></h1>
+<p>Geocomputing is about processing and interpreting geo-data, realizing physical simulations and solving inverse problems. All these tasks somehow call for approximating time and space by discrete points, some associated values, and the neighborhood relationships used to connect these points.</p>
+<p>Grids typically implement these principles, but which grids should be used in geocomputing <a class="reference internal" href="#c3b34628"><span class="std std-numref">Figure 1</span></a>? Cartesian grids have many qualities, owing to their structure and regularity. Neighborhoods are trivially defined. Many great image processing algorithms, geophysical methods, geostatistical algorithms, and other useful numerical techniques directly apply to Cartesian grids. A computer screen is a grid. Most computations in reflection geophysics use Cartesian grids, and produce excellent images of the subsurface.</p>
+<p>Yet, a vast community of geoscientists and physicists, not only in the academic world, has spent much effort to develop codes on <strong>irregular</strong> and <strong>unstructured grids</strong>. For example, reservoir engineers and hydrogeologists use deformed Cartesian grids (also called corner-point or geocellular grids, see for instance <a class="reference external" href="https://dumux.org/">DUMux</a>). The bravest use fully unstructured grids (made of tetrahedra, prisms or even arbitrary polyhedra). From a programming standpoint, these grids are scary. Many of the efficient algorithms designed for Cartesian grids fall apart when considering irregular geometry and arbitrary connectivity. Parallelization remains possible, but is more difficult to implement. Still, in addition to commercial software, several open-source packages exist nowadays to work effectively with unstructured grids, for example:</p>
+<ul class="simple">
+<li><p>Generic meshing and geometric libraries: <a class="reference external" href="http://wias-berlin.de/software/index.jsp?id=TetGen">TetGen</a>, <a class="reference external" href="https://gmsh.info">GMSH</a>, <a class="reference external" href="http://alice.loria.fr/index.php/software/4-library/75-geogram.html">Geogram</a>, <a class="reference external" href="https://www.mmgtools.org">MMG</a>, <a class="reference external" href="https://www.cgal.org">CGAL</a>.</p></li>
+<li><p>Numerical simulation packages for generic computations such as <a class="reference external" href="https://mooseframework.inl.gov/">Moose</a>, <a class="reference external" href="https://freefem.org">FreeFEM</a>, <a class="reference external" href="https://mfem.org">MFEM</a>, or specialized such as <a class="reference external" href="https://www.openfoam.com">OpenFOAM</a> in fluid dynamics or <a class="reference external" href="http://www.seissol.org">SeisSol </a>in seismology.</p></li>
+<li><p>Integrated geocomputing platforms: <a class="reference external" href="https://www.opengeosys.org">OpenGeoSys</a> , <a class="reference external" href="http://ringmesh.org">RINGMesh</a>, <a class="reference external" href="https://geode-solutions.com/opengeode">OpenGeode</a>.</p></li>
+</ul>
+<div class="figure align-default" id="c3b34628">
+<img alt="_images/5w7N97WoctdHdShYPn5p-hUid2ST5QE0eIdPPLz8F-v1.png" src="_images/5w7N97WoctdHdShYPn5p-hUid2ST5QE0eIdPPLz8F-v1.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Four possible meshes representing the same geological structure (a thrust fold in Corbieres). Courtesy of Arnaud Botella.</span><a class="headerlink" href="#c3b34628" title="Permalink to this image">¶</a></p>
+</div>
+<p>Why did unstructured grids come up? This may be explained by some fascination for pretty pictures and a form of mathematical beauty of these meshes. But there has to be something else to justify investment in the business and engineering world.</p>
+<p>We suggest that a stronger reason holds in the classical quote attributed to Albert Einstein: “Everything should be made as simple as possible, but not simpler”.</p>
+<div class="section" id="geometry-discontinuities">
+<h2>Geometry / discontinuities<a class="headerlink" href="#geometry-discontinuities" title="Permalink to this headline">¶</a></h2>
+<p>Geological processes are a tremendous engine to create geometrically complex changes of physical parameter fields; these changes can be quite abrupt, as two rock samples 1cm away one from another may have been formed million years apart <span id="id1">[<a class="reference internal" href="wellmann-a-geological-model-is-one-of-many.html#id9">WC18</a>]</span>.</p>
+<p>Such sharp geological features may have arbitrary geometries, which is generally approximated in Cartesian grids as stair-steps. This may (or may not) be a problem, depending on the application at hand. Explicit representation of geological objects can be essential to focus on geological details deemed important for a particular purpose. This is exemplified for instance in the area of fracture modelling.</p>
+<p>Studying fracture growth, quantifying fault reactivation and displacement needs an accurate geometric representation. The connectivity of fractures is also a very important point when it comes to understand subsurface flow. As fractures seldom align on orthogonal directions and generally span multiple scales, their explicit representation is very useful at some point (e.g., <span id="id2">Nick and Matthäi [<a class="reference internal" href="#id10">NMatthai11</a>]</span>; <span id="id3">Bonneau <em>et al.</em> [<a class="reference internal" href="#id7">BCR16</a>]</span>).</p>
+<p>More generally, an accurate geometric representation of subsurface geologic features is important to create benchmarks such as the <a class="reference external" href="https://seg.org/SEAM/home">SEAM </a>benchmark models; homogenized parameter field on Cartesian grids can then eventually become handy <span id="id4">[<a class="reference internal" href="#id9">CC18</a>]</span>.</p>
+</div>
+<div class="section" id="adaptivity">
+<h2>Adaptivity<a class="headerlink" href="#adaptivity" title="Permalink to this headline">¶</a></h2>
+<p>With Cartesian grids, the grid block size corresponds <strong>everywhere</strong> to the size of the smallest feature that you want to represent. This is generally fine in two dimensions (digital pictures have the same limitations and are still very good “digital eyes”), but raises significant computational challenges in three-dimensional domains. Moreover, the Earth remains mostly inaccessible to observations an hidden “details” may matter.</p>
+<p>Practitioners, therefore, make compromises by averaging some (expensive) borehole measurements at flow simulation block scale; conversely, values away from observations are poorly constrained and are sampled using geostatistical methods, even in the areas where heterogeneity has little or no impact. With unstructured grids, the element size can vary according to the dimension of the features that matter (See for instance <span id="id5">[<a class="reference internal" href="#id11">SR05</a>]</span> for further discussions in seismology).</p>
+<p>All in all, unstructured meshing technology, once restricted to CAD/CAM applications, has matured to handle realistic geometries of geological features. We believe this is now the right time to use these technologies to address longstanding geocomputing challenges.</p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p id="id6"><dl class="citation">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">BCR16</a></span></dt>
+<dd><p>Francois Bonneau, Guillaume Caumon, and Philippe Renard. Impact of a Stochastic Sequential Initiation of Fractures on the Spatial Correlations and Connectivity of Discrete Fracture Networks. <em>Journal of Geophysical Research: Solid Earth</em>, 121(8):5641–5658, 2016. <a class="reference external" href="https://doi.org/10.1002/2015JB012451">doi:10.1002/2015JB012451</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">CC18</a></span></dt>
+<dd><p>Paul Cupillard and Yann Capdeville. Non-periodic homogenization of 3-D elastic media for the seismic wave equation. <em>Geophysical Journal International</em>, 213(2):983–1001, 5 2018. [Online; accessed 2022-01-18]. URL: <a class="reference external" href="https://academic.oup.com/gji/article/213/2/983/4831486">https://academic.oup.com/gji/article/213/2/983/4831486</a>, <a class="reference external" href="https://doi.org/10.1093/gji/ggy032">doi:10.1093/gji/ggy032</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id2">NMatthai11</a></span></dt>
+<dd><p>H. M. Nick and S. K. Matthäi. Comparison of Three FE-FV Numerical Schemes for Single- and Two-Phase Flow Simulation of Fractured Porous Media. <em>Transport in Porous Media</em>, 90(2):421–444, 11 2011. [Online; accessed 2022-01-18]. URL: <a class="reference external" href="http://link.springer.com/10.1007/s11242-011-9793-y">http://link.springer.com/10.1007/s11242-011-9793-y</a>, <a class="reference external" href="https://doi.org/10.1007/s11242-011-9793-y">doi:10.1007/s11242-011-9793-y</a>.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id5">SR05</a></span></dt>
+<dd><p>Malcolm Sambridge and Nick Rawlinson. <em>Seismic tomography with irregular meshes</em>, pages 49–65. American Geophysical Union, 2005. URL: <a class="reference external" href="http://dx.doi.org/10.1029/157GM04">http://dx.doi.org/10.1029/157GM04</a>, <a class="reference external" href="https://doi.org/10.1029/157gm04">doi:10.1029/157gm04</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">WC18</a></span></dt>
+<dd><p>Florian Wellmann and Guillaume Caumon. <em>3-D Structural geological models: Concepts, methods, and uncertainties</em>, pages 1–121. Volume 59. Elsevier, 2018, [Online; accessed 2022-01-19]. URL: <a class="reference external" href="https://linkinghub.elsevier.com/retrieve/pii/S0065268718300013">https://linkinghub.elsevier.com/retrieve/pii/S0065268718300013</a>, <a class="reference external" href="https://doi.org/10.1016/bs.agph.2018.09.001">doi:10.1016/bs.agph.2018.09.001</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="5-minute-intro-to-hpc.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">5 Minute Intro to HPC</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cawood-bond-why-use-virtual-outcrops.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Why use virtual outcrops?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Software Underground<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

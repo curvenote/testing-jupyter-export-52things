@@ -27,9 +27,9 @@ jobs:
         run: |
           jupyter-book build .
 
-      - name: Copy CNAME for GitHub Site
-        run: |
-          echo cli.curvenote.dev > _build/html/CNAME
+      # - name: Copy CNAME for GitHub Site
+      #   run: |
+      #     echo productionsite.com > _build/html/CNAME
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action

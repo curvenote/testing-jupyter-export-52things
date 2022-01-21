@@ -1,0 +1,88 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: introduction
+chapters:
+  - file: indices
+    sections:
+      - file: alphabetical
+      - file: by-author
+      - file: by-topic
+  - file: chapters
+    sections:
+      - file: bentley-in-praise-of-small-tools
+      - file: bentley-best-practices-not-always-best-approach
+      - file: bingham-domain-driven-design
+      - file: 5-minute-intro-to-hpc
+      - file: caumon-levy-is-geology-cartesian
+      - file: cawood-bond-why-use-virtual-outcrops
+      - file: cockett-building-technical-comunication-tools
+      - file: ooi-simple-machine-learning-tutorial
+      - file: dinneen-segy
+      - file: dramsch-general-purpose-gpu-programming
+      - file: dunnington-r-rstudio-tidyverse-for-geocomputing
+      - file: dunnington-grammar-of-graphics
+      - file: bril-turn-data-into-colors
+      - file: ennen-software-everywhere
+      - file: fomel-reproducable-research
+      - file: gram-seismic-data-encryption
+      - file: gosses-standing-on-shoulders
+      - file: hale-my-favorite-10-line-program
+      - file: hall-whats-so-special-about-geoscience
+      - file: hall-what-is-scientific-computing
+      - file: howell-burnham-virtual-geoscience-revolution-1
+      - file: howell-burnham-virtual-geoscience-revolution-2
+      - file: kondrat-getting-started-in-geocomputing
+      - file: larsen-crossplots-boardroom-table
+      - file: leckenby-my-name-is-bot-geobot
+      - file: leeman-hardware-is-hard-teach-geotech
+      - file: mcnaughton-digitalization
+      - file: menger-steady-advance-of-linux
+      - file: menger-software-challenges-in-oil-and-gas
+      - file: newton-human-neural-networks-in-geocomputing
+      - file: niccoli-prototype-colormaps-for-faults
+        sections:
+          - file: sigmoid-function-experiments-ipynb
+          - file: sigmoid-app-static-new-ipynb
+          - file: scaling-seismic-sigmoid-ipynb
+      - file: niccoli-keep-on-improving-geocomputing-projects
+        sections:
+          - file: 52-things-tutorial-ipynb
+          - file: scipy-gaussian-kernel-ipynb
+          - file: speed-up-convolution-ipynb
+      - file: niccoli-advice-on-reproducing-figures
+        sections:
+          - file: interactive-parameter-exploration-exponential-func
+          - file: how-to-evaluate-and-compare-colormaps-ipynb
+          - file: how-to-make-exponetial-grayscale-ipynb
+      - file: niederau-tailor-your-teaching-with-jupyter
+      - file: pethick-the-obsolete-geoscientist
+      - file: pisel-arm-wavers-anonymous
+      - file: purves-learn-javascript
+      - file: pyrcz-open-source-geostatistical-modelling
+      - file: pyrcz-machine-learning-for-geological-modelling
+      - file: richardson-use-standard-not-specialized-formats
+      - file: rogers-advice-fracture-modelling-to-younger-self
+      - file: rusic-i-hate-computers
+      - file: rusic-i-hate-computers-2
+      - file: saltman-speeding-things-up
+      - file: selvage-serverless-computing
+      - file: steen-how-to-teach-geoscience-students-to-code
+      - file: thurmond-overcome-the-tyranny-of-formats
+      - file: wellmann-a-geological-model-is-one-of-many
+      - file: delavarga-gempy-3d-structural-geomodelling
+      - file: sabirin-quality-checking-spatial-data
+      - file: sasvari-the-pheonix
+      - file: storey-de-profundis-of-well-depth
+  - file: bios
+  - file: contributing
+    sections:
+      - file: review-status
+      - file: submitting-an-article
+      - file: headshots-needed
+      - file: for-reviewers
+  - file: not-ready-for-review
+    sections:
+      - file: bougher-a-linear-algebra-approach-seismic-model
+

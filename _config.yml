@@ -1,0 +1,30 @@
+# Jupyter Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: 52 Things You Should Know About Geocomputing
+author: Software Underground
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://curvenote.com/@swung/52-things-geocomputing # Online location of your book
+
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon: favicon.ico
+  # google_analytics_id: UA-XXXXXXXX-X
+  extra_navbar: Written in <a href="https://curvenote.com">Curvenote</a>
